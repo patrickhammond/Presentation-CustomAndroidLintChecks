@@ -6,14 +6,14 @@ import java.util.List;
 import com.android.tools.lint.client.api.IssueRegistry;
 import com.android.tools.lint.detector.api.Issue;
 
+@SuppressWarnings("unused")
 public class OttoIssueRegistry extends IssueRegistry {
-    public OttoIssueRegistry() {
-    }
-
     @Override
     public List<Issue> getIssues() {
         return Arrays.asList(
-                ProguardAnnotationDetector.ISSUE
+                ProguardAnnotationDetector.ISSUE,
+                AnnotationVisibilityDetector.ISSUE,
+                MinSDKDetector.ISSUE
         );
     }
 }

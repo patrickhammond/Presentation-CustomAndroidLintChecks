@@ -18,14 +18,11 @@ public class ProguardAnnotationDetector extends Detector {
             "    @com.squareup.otto.Subscribe public *;\n" +
             "    @com.squareup.otto.Produce public *;\n" +
             "}";
-    private static final String EXPLANATION = "Otto needs this in the ProGuard configuration:\n\n" +
-            PROGUARD_CONFIGURATION;
+    private static final String EXPLANATION = "Check the Otto website for the correct ProGuard configuration.";
     private static final int PRIORITY = 6;
-
     private static final Implementation IMPLEMENTATION = new Implementation(
             ProguardAnnotationDetector.class,
             Scope.PROGUARD_SCOPE);
-
 
     public static final Issue ISSUE = Issue.create(
             "OttoProGuard",
@@ -49,6 +46,7 @@ public class ProguardAnnotationDetector extends Detector {
     }
 
     private void checkProguardConfiguration(@NonNull Context context, String contents) {
+        // FIXME - This is a very naive check as it doesn't account for spacing, order, etc.
         int index = contents.indexOf(PROGUARD_CONFIGURATION);
         if (index == -1) {
             context.report(
