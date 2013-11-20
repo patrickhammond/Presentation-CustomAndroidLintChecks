@@ -1,0 +1,7 @@
+./gradlew :OttoChecks:build
+
+ln ~/git/LintDemo/SickAppProject/OttoChecks/build/libs/OttoChecks-1.0.jar OttoChecks-1.0.jar
+
+./gradlew :SickApp:build :SickApp:lint
+
+/Users/phammond/git/LintDemo/SickAppProject/SickApp/build/lint/ReleaseOutput.html

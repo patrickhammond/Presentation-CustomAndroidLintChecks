@@ -1,1 +1,2 @@
 include ':SickApp'
+include ':OttoChecks'

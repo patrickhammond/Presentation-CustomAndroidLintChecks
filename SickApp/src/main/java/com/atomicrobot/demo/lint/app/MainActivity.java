@@ -11,7 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
+import com.squareup.otto.Subscribe;
+
 public class MainActivity extends Activity {
+
+    // Will blow up during registration because it is private
+    @Subscribe
+    private void subscribeToSomeEvent(Object object) {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
