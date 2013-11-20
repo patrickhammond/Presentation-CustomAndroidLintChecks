@@ -4,5 +4,6 @@
     <string name="app_name">LintDemo</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="steve_says">iOS</string>
 
 </resources>

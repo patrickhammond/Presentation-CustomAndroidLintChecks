@@ -13,7 +13,8 @@ public class OttoIssueRegistry extends IssueRegistry {
         return Arrays.asList(
                 ProguardAnnotationDetector.ISSUE,
                 AnnotationVisibilityDetector.ISSUE,
-                MinSDKDetector.ISSUE
+                MinSDKDetector.ISSUE,
+                ProfanityDetector.ISSUE
         );
     }
 }
