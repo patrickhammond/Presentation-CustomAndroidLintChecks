@@ -1,6 +1,15 @@
-./gradlew :OttoChecks:build
-ln ~/git/LintDemo/SickAppProject/OttoChecks/build/libs/OttoChecks-1.0.jar OttoChecks-1.0.jar
-./gradlew :SickApp:build :SickApp:lint
-~/git/LintDemo/SickAppProject/SickApp/build/lint/ReleaseOutput.html
+Not a good sample of what an Android app should look like but what some *very* simple (probably
+incorrect) Otto lint checks might look like.
 
-https://android.googlesource.com/platform/tools/base/+/master/lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks
+Useful commands:
+  Builds the Otto Lint checks:
+    ./gradlew :OttoChecks:build
+  Links the built lint check to where the lint check will be found (lame!):
+    ln ~/git/LintDemo/SickAppProject/OttoChecks/build/libs/OttoChecks-1.0.jar OttoChecks-1.0.jar
+  Runs the lint checks against the sickly app:
+    ./gradlew :SickApp:build :SickApp:lint
+  Views the generated lint report:
+    ~/git/LintDemo/SickAppProject/SickApp/build/lint/ReleaseOutput.html
+
+Existing Android lint checks:
+  https://android.googlesource.com/platform/tools/base/+/master/lint/libs/lint-checks/src/main/java/com/android/tools/lint/checks

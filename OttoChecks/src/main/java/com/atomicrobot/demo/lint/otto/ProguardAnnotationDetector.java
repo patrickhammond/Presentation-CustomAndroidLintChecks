@@ -9,9 +9,6 @@ import com.android.tools.lint.detector.api.Issue;
 import com.android.tools.lint.detector.api.Location;
 import com.android.tools.lint.detector.api.Scope;
 import com.android.tools.lint.detector.api.Severity;
-import com.android.tools.lint.detector.api.Speed;
-
-import java.io.File;
 
 public class ProguardAnnotationDetector extends Detector {
     private static final String PROGUARD_CONFIGURATION = "-keepclassmembers class ** {\n" +
@@ -55,18 +52,5 @@ public class ProguardAnnotationDetector extends Detector {
                     EXPLANATION,
                     null);
         }
-    }
-
-    @Override
-    public boolean appliesTo(@NonNull Context context, @NonNull File file) {
-        return true;
-    }
-
-    @NonNull
-    @Override
-    public Speed getSpeed() {
-
-
-        return Speed.FAST;
     }
 }
